@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Show the hero component 1`] = `
+<div>
+  HERO
+</div>
+`;
