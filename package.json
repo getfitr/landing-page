@@ -6,20 +6,38 @@
     "@chakra-ui/react": "^1.6.0",
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.3.0",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
     "framer-motion": "^4.1.9",
+    "lodash": "^4.17.21",
+    "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"
   },
+  "devDependencies": {
+    "cypress": "^7.1.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.23.2",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "standard-version": "^9.2.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "cypress": "cypress open",
+    "deploy-to-dev": "git push --follow-tags origin dev",
+    "release": "standard-version && npm run deploy-to-dev",
+    "major-release": "standard-version --release-as major && npm run deploy-to-dev",
+    "eject": "react-scripts eject",
+    "lint-js:fix": "eslint --ext .js --ext .jsx . --fix",
+    "lint-js": "eslint --ext .js --ext .jsx .",
+    "lint": "npm run lint-js",
+    "fresh-npm-install": "npm ci"
   },
   "eslintConfig": {
     "extends": [
