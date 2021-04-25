@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Shows the app 1`] = `
+Array [
+  <div
+    className="css-1cqrh7h"
+  >
+    <nav
+      className="css-1pp225c"
+    >
+      <div
+        className="css-70qvj9"
+      >
+        <div>
+          LOGO
+        </div>
+      </div>
+      <div
+        className="css-259i0c"
+        onClick={[Function]}
+      >
+        <svg
+          fill="none"
+          height="1em"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="3"
+            x2="21"
+            y1="12"
+            y2="12"
+          />
+          <line
+            x1="3"
+            x2="21"
+            y1="6"
+            y2="6"
+          />
+          <line
+            x1="3"
+            x2="21"
+            y1="18"
+            y2="18"
+          />
+        </svg>
+      </div>
+      <div
+        className="css-1w6q9gu"
+      >
+        <div
+          className="css-dba1zl"
+        >
+          <p
+            className="chakra-text css-i09fi7"
+          >
+            <a
+              href="/"
+              onClick={[Function]}
+            >
+              GetFitr! App
+            </a>
+          </p>
+          <p
+            className="chakra-text css-i09fi7"
+          >
+            <a
+              href="/project"
+              onClick={[Function]}
+            >
+              The GetFitr! Dev Project
+            </a>
+          </p>
+          <p
+            className="chakra-text css-1j3syha"
+          >
+            <a
+              href="/signup"
+              onClick={[Function]}
+            >
+              <button
+                className="chakra-button css-99not7"
+                type="button"
+              >
+                Create an Account
+              </button>
+            </a>
+          </p>
+        </div>
+      </div>
+    </nav>
+    <div>
+      This is the Footer
+    </div>
+  </div>,
+  <span />,
+]
+`;
