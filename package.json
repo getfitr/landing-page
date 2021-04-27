@@ -2,6 +2,7 @@
   "name": "getfitr-landing-page",
   "version": "0.1.2",
   "private": true,
+  "main": "src/index.js",
   "dependencies": {
     "@chakra-ui/react": "^1.6.0",
     "@emotion/react": "^11.1.5",
@@ -13,39 +14,67 @@
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
+    "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.1.10",
     "cypress": "^7.1.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "enzyme-to-json": "^3.6.2",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.23.2",
+    "jest-environment-enzyme": "^7.1.2",
+    "jest-enzyme": "^7.1.2",
+    "react-scripts": "^4.0.3",
     "react-test-renderer": "^17.0.2",
     "standard-version": "^9.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "react-scripts test --coverage",
+    "build": "react-scripts build",
     "cypress": "cypress open",
     "deploy-to-dev": "git push --follow-tags origin dev",
     "release": "standard-version && npm run deploy-to-dev",
     "major-release": "standard-version --release-as major && npm run deploy-to-dev",
-    "eject": "react-scripts eject",
     "lint-js:fix": "eslint --ext .js --ext .jsx . --fix",
     "lint-js": "eslint --ext .js --ext .jsx .",
     "lint": "npm run lint-js",
     "fresh-npm-install": "npm ci"
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.{jsx,js}",
+      "!**/node_modules/**"
+    ],
+    "coverageReporters": [
+      "json",
+      "text"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": -10
+      }
+    }
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "react-app"
     ]
   },
   "browserslist": {

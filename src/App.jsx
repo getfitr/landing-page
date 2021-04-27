@@ -1,3 +1,4 @@
+import React from 'react';
 import { ChakraProvider } from '@chakra-ui/react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Landing from './pages/Landing';
@@ -7,9 +8,7 @@ const App = () => (
   <ChakraProvider theme={getfitrTheme}>
     <BrowserRouter>
       <Switch>
-        <Route path="/">
-          <Landing />
-        </Route>
+        <Route exact path="/"><Landing /></Route>
       </Switch>
     </BrowserRouter>
   </ChakraProvider>

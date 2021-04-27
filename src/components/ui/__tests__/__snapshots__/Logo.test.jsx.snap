@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Displays the Logo 1`] = `
-<div>
-  LOGO
+<div
+  className="css-0"
+>
+  <p
+    className="chakra-text css-1hgmzub"
+  >
+    GetFitr!
+  </p>
 </div>
 `;

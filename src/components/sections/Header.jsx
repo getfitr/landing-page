@@ -1,20 +1,12 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Box, Flex, Text, Button } from '@chakra-ui/react';
+import React, { useState } from 'react';
+import { Box, Flex, Button } from '@chakra-ui/react';
 import Logo from '../ui/Logo';
-
+import MenuItem from '../ui/MenuItem';
 import { CloseIcon, MenuIcon } from '../ui/Icons';
 
-const MenuItem = ({ children, isLast, to = "/", ...rest }) => (
-  <Text
-    mb={{ base: isLast ? 0 : 8, sm: 0 }}
-    mr={{ base: 0, sm: isLast ? 0 : 8 }}
-    display="block"
-    {...rest}
-  >
-    <Link to={to}>{children}</Link>
-  </Text>
-);
+const hoverMenuItem = {
+  color: ["highlight.300", "highlight.300", "primary.300", "primary.300"],
+};
 
 const Header = (props) => {
   const [show, setShow] = useState(false);
@@ -29,24 +21,25 @@ const Header = (props) => {
       w="100%"
       mb={8}
       p={8}
-      bg={["primary.500", "primary.500", "transparent", "transparent"]}
-      color={["white", "white", "primary.700", "primary.700"]}
+      bg={["primary.300", "primary.300", "transparent", "transparent"]}
+      color={["secondary.200", "secondary.200", "primary.700", "primary.700"]}
       {...props}
     >
       <Flex align="center">
         <Logo
           w="100%"
-          color={["white", "white", "primary.500", "primary.500"]}
+          color={["highlight.200", "highlight.200", "highlight.800", "highlight.800"]}
         />
       </Flex>
 
-      <Box display={{ base: "block", md: "none" }} onClick={toggleMenu}>
+      <Box display={{ base: "block", md: "none" }} onClick={toggleMenu} className="menu-toggler">
         {show ? <CloseIcon /> : <MenuIcon />}
       </Box>
 
       <Box
         display={{ base: show ? "block" : "none", md: "block" }}
         flexBasis={{ base: "100%", md: "auto" }}
+        className="menu-wrapper"
       >
         <Flex
           align={["center", "center", "center", "center"]}
@@ -54,24 +47,25 @@ const Header = (props) => {
           direction={["column", "row", "row", "row"]}
           pt={[4, 4, 0, 0]}
         >
-          <MenuItem to="/">GetFitr! App</MenuItem>
-          <MenuItem to="/project">The GetFitr! Dev Project</MenuItem>
-          <MenuItem to="/signup" isLast>
+          <MenuItem to="/" _hover={hoverMenuItem} linkClassName="home">
+            GetFitr! App
+          </MenuItem>
+          <MenuItem to="/project" _hover={hoverMenuItem} linkClassName="project">
+            GetFitr! Project
+          </MenuItem>
+          <MenuItem to="/signup" isLast linkClassName="signup">
             <Button
+              className="signup-button"
               size="sm"
               rounded="md"
-              color={["primary.500", "primary.500", "white", "white"]}
-              bg={["white", "white", "primary.500", "primary.500"]}
+              color={["primary.700", "primary.700", "secondary.200", "secondary.200"]}
+              bg={["secondary.100", "secondary.100", "primary.700", "primary.700"]}
               _hover={{
-                bg: [
-                  "primary.100",
-                  "primary.100",
-                  "primary.600",
-                  "primary.600",
-                ],
+                color: ["secondary.200", "secondary.200", "primary.600", "primary.600"],
+                bg: ["primary.600", "primary.600", "secondary.300", "secondary.300"],
               }}
             >
-              Create an Account
+              Sign Up for GetFitr!
             </Button>
           </MenuItem>
         </Flex>
