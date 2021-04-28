@@ -1,92 +1,37 @@
 {
-  "name": "getfitr-landing-page",
-  "version": "0.1.2",
-  "private": true,
-  "main": "src/index.js",
-  "dependencies": {
-    "@chakra-ui/react": "^1.6.0",
-    "@emotion/react": "^11.1.5",
-    "@emotion/styled": "^11.3.0",
-    "framer-motion": "^4.1.9",
-    "lodash": "^4.17.21",
-    "prop-types": "^15.7.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-icons": "^4.2.0",
-    "react-router-dom": "^5.2.0",
-    "web-vitals": "^1.0.1"
+  "name": "landing-page-pipeline",
+  "version": "0.1.5",
+  "bin": {
+    "landing-page-pipeline": "bin/landing-page-pipeline.js"
+  },
+  "license": "MIT",
+  "scripts": {
+    "app:install": "yarn --cwd ./app",
+    "app:start": "yarn --cwd ./app start",
+    "app:build": "yarn --cwd ./app build",
+    "app:test": "yarn --cwd ./app test",
+    "build": "tsc",
+    "cdk": "cdk",
+    "cdk:deploy": "cdk deploy LandingPageStack",
+    "deploy": "git push --follow-tags origin main && npm run cdk:deploy",
+    "release": "standard-version && npm run deploy",
+    "major-release": "standard-version --release-as major && npm run deploy"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.2.6",
-    "@testing-library/user-event": "^12.1.10",
-    "cypress": "^7.1.0",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.6",
-    "enzyme-to-json": "^3.6.2",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.23.2",
-    "jest-environment-enzyme": "^7.1.2",
-    "jest-enzyme": "^7.1.2",
-    "react-scripts": "^4.0.3",
-    "react-test-renderer": "^17.0.2",
-    "standard-version": "^9.2.0"
+    "@aws-cdk/assert": "1.98.0",
+    "@types/node": "10.17.27",
+    "aws-cdk": "^1.100.0",
+    "standard-version": "^9.2.0",
+    "ts-node": "^9.0.0",
+    "typescript": "~3.9.7"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "test": "react-scripts test",
-    "test:coverage": "react-scripts test --coverage",
-    "build": "react-scripts build",
-    "cypress": "cypress open",
-    "deploy-to-dev": "git push --follow-tags origin dev",
-    "release": "standard-version && npm run deploy-to-dev",
-    "major-release": "standard-version --release-as major && npm run deploy-to-dev",
-    "lint-js:fix": "eslint --ext .js --ext .jsx . --fix",
-    "lint-js": "eslint --ext .js --ext .jsx .",
-    "lint": "npm run lint-js",
-    "fresh-npm-install": "npm ci"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "**/*.{jsx,js}",
-      "!**/node_modules/**"
-    ],
-    "coverageReporters": [
-      "json",
-      "text"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 90,
-        "functions": 90,
-        "lines": 90,
-        "statements": -10
-      }
-    }
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "babel": {
-    "presets": [
-      "react-app"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "@aws-cdk/aws-codebuild": "^1.100.0",
+    "@aws-cdk/aws-codedeploy": "^1.100.0",
+    "@aws-cdk/aws-codepipeline": "^1.100.0",
+    "@aws-cdk/aws-codepipeline-actions": "^1.100.0",
+    "@aws-cdk/aws-lambda": "^1.100.0",
+    "@aws-cdk/core": "^1.100.0",
+    "source-map-support": "^0.5.16"
   }
 }

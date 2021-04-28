@@ -1,30 +1,51 @@
 # GetFitr! Landing Page
 
-The landing page for the GetFitr! project.
+This is the project for developing and deploying the landing page for the GetFitr! project.
 
+## Getting Started
 
-# Getting Started with Create React App
+### Clone the repository:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```bash
+git clone https://github.com/getfitr/landing-page.git
+cd landing-page
+```
 
-## Available Scripts
+### Install all dependencies for the project:
 
-In the project directory, you can run:
+```bash
+# installs dependencies for the CDK
+npm install
+# installs dependencies for the app
+npm run app:install
+```
 
-### `yarn start`
+### Start your app locally:
 
-Runs the app in the development mode.\
+```bash
+npm run app:start
+```
+
+This runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The page will reload if you make edits. You will also see any lint errors in the console.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### To run test just run:
 
-### `yarn test`
+```bash
+# this starts a jest runner which is watching for changes
+npm run app:test
+```
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+
+### Build the React app:
+
+```bash
+npm run app:build
+```
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -34,42 +55,37 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+### Create a release like this:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+npm run release
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+A release will...
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- create a new version number based on conventional versioning guidelines (see [standard-version documentation](https://github.com/conventional-changelog/standard-version) for commit guidelines),
+- write all commit messages to the `CHANGELOG.md` file,
+- create a git tag with the version number,
+- pushes the changes to the main branch on GitHub,
+- and deploys the CI/CD pipeline, if changes where made.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+A push to the main branch on GitHub will always trigger the pipeline to build and deploy the change into production.
 
-## Learn More
+The `cdk.json` file tells the CDK Toolkit how to build the pipeline.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Dependencies / Requirements
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The stack needs an existing GitHub connection. The documentation explains [how to create the connection in the CodePipeline settings](https://docs.aws.amazon.com/codepipeline/latest/userguide/connections-github.html).
 
-### Code Splitting
+The stack is expecting an AWS Resource Name (ARN) for the GitHub Connection you have created. It is expecting a `aws-config.js` which has a `connectionArn` parameter. Provide your GitHub Connection ARN in this file.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The `aws-config.js` should also provide the information to the repository (i.e., the owner, the repo name, and the branch).
 
-### Analyzing the Bundle Size
+Here is an example for the `aws-config.js` file:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```js
+export const connectionArn = "arn:aws:codestar-connections:[REGION]:[ACCOUNT_ID]:connection/[RESOURCE_ID]";
+```
 
-### Making a Progressive Web App
+## Project structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
