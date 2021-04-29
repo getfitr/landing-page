@@ -9,15 +9,10 @@
   },
   "license": "MIT",
   "scripts": {
-    "app:install": "yarn --cwd ./app",
-    "app:start": "yarn --cwd ./app start",
-    "app:build": "yarn --cwd ./app build",
-    "app:test": "yarn --cwd ./app test",
-    "app:prebuild": "yarn --cwd ./app test:prebuild",
     "build": "tsc",
     "cdk": "cdk",
     "cdk:deploy": "cdk deploy LandingPagePipeline",
-    "deploy": "git push --follow-tags origin main && npm run cdk:deploy",
+    "deploy": "npm run cdk:deploy && git push --follow-tags origin main",
     "release": "standard-version && npm run deploy",
     "major-release": "standard-version --release-as major && npm run deploy"
   },
