@@ -15,20 +15,21 @@ phases:
     commands:
       - echo Build is starting now...
       - echo Installing source dependencies...
-      - npm run app:install
+      - cd app
+      - yarn
 
   pre_build:
     commands:
       - echo Running unit tests...
-      - npm run app:prebuild
+      - yarn test:prebuild
 
   build:
     commands:
       - echo Dev Build starting...
-      - npm run app:build
+      - yarn build
       - echo Checking build artifacts
-      - cd app/build && ls -la
-      - cd .. && cd ..
+      - cd build && ls -la
+      - cd ..
 
   post_build:
     commands:
@@ -36,14 +37,9 @@ phases:
       - echo environment - $env
       - echo cfdistid - $cfdistid
 
-      # (1) Version control bundle
-      - echo "Getting Git Commit Sha for bundle version control"
-      - export bundleVersion=$(git rev-parse --short HEAD)
-      - echo bundleVersion = $bundleVersion
-
-      # (2) Clearing CloudFront Cache
+      # Clearing CloudFront Cache
       - echo "Calling cloudfront create-invalidation"
-      # un-echo this line when ready
+      # un-echo the next line when ready
       - echo aws cloudfront create-invalidation --distribution-id $cfdistid --paths "/*"
       - echo "Clear cache on cloudfront"
       - echo "Job completed successfully! Wait for CloudFront Cache to be cleared for a few nimutes"
