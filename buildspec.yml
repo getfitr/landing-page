@@ -1,0 +1,55 @@
+# Aws Doc: https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html
+# Ref : https://github.com/backspace-academy/aws-nodejs-sample-codebuild/blob/master/buildspec.yml
+# Do not change version. This is the version of aws buildspec, not the version of your buildspec file.
+version: 0.2
+
+env:
+  exported-variables:
+    - env
+    - cfdistid  #CloudFront Distribution ID to clear the cache
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+    commands:
+      - echo Build is starting now...
+      - echo Installing source dependencies...
+      - npm run app:install
+
+  pre_build:
+    commands:
+      - echo Running unit tests...
+      - npm run app:prebuild
+
+  build:
+    commands:
+      - echo Dev Build starting...
+      - npm run app:build
+      - echo Checking build artifacts
+      - cd app/build && ls -la
+      - cd .. && cd ..
+
+  post_build:
+    commands:
+      - echo Checking Environment Variables
+      - echo environment - $env
+      - echo cfdistid - $cfdistid
+
+      # (1) Version control bundle
+      - echo "Getting Git Commit Sha for bundle version control"
+      - export bundleVersion=$(git rev-parse --short HEAD)
+      - echo bundleVersion = $bundleVersion
+
+      # (2) Clearing CloudFront Cache
+      - echo "Calling cloudfront create-invalidation"
+      # un-echo this line when ready
+      - echo aws cloudfront create-invalidation --distribution-id $cfdistid --paths "/*"
+      - echo "Clear cache on cloudfront"
+      - echo "Job completed successfully! Wait for CloudFront Cache to be cleared for a few nimutes"
+
+artifacts:
+  discard-paths: yes
+  # base-directory: 'app/build'
+  files:
+    - app/build/*

@@ -1,0 +1,544 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Show empty landing layout 1`] = `
+<div
+  className="css-1cqrh7h"
+>
+  <nav
+    className="css-11u51jp"
+  >
+    <div
+      className="css-70qvj9"
+    >
+      <div
+        className="css-ichje4"
+      >
+        <p
+          className="chakra-text css-1hgmzub"
+        >
+          GetFitr!
+        </p>
+      </div>
+    </div>
+    <div
+      className="menu-toggler css-dsyim5"
+      onClick={[Function]}
+    >
+      <svg
+        fill="none"
+        height="1em"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line
+          x1="3"
+          x2="21"
+          y1="12"
+          y2="12"
+        />
+        <line
+          x1="3"
+          x2="21"
+          y1="6"
+          y2="6"
+        />
+        <line
+          x1="3"
+          x2="21"
+          y1="18"
+          y2="18"
+        />
+      </svg>
+    </div>
+    <div
+      className="menu-wrapper css-8olkqp"
+    >
+      <div
+        className="css-prcoui"
+      >
+        <p
+          className="chakra-text css-1nlkja4"
+        >
+          <a
+            className="home"
+            href="/"
+            onClick={[Function]}
+          >
+            GetFitr! App
+          </a>
+        </p>
+        <p
+          className="chakra-text css-1nlkja4"
+        >
+          <a
+            className="project"
+            href="/project"
+            onClick={[Function]}
+          >
+            GetFitr! Project
+          </a>
+        </p>
+        <p
+          className="chakra-text css-1g5pnks"
+        >
+          <a
+            className="signup"
+            href="/signup"
+            onClick={[Function]}
+          >
+            <button
+              className="chakra-button signup-button css-1ub6xfx"
+              type="button"
+            >
+              Sign Up for GetFitr!
+            </button>
+          </a>
+        </p>
+      </div>
+    </div>
+  </nav>
+  <div
+    className="css-1wcxvl2"
+  >
+    <hr
+      aria-orientation="horizontal"
+      className="chakra-divider css-1upb9tn"
+    />
+    <div
+      className="css-m9ru54"
+    >
+      <div
+        className="copyright css-0"
+      >
+        © 2021 Carsten Koch – Chakra UI template from
+        <a
+          className="chakra-link css-0"
+          href="https://raptis.wtf/blog/build-a-landing-page-with-chakra-ui-part-1/"
+          target="_blank"
+        >
+           Jim Raptis
+        </a>
+        .
+      </div>
+      <div
+        className="menu-wrapper css-g3n2lv"
+      >
+        <div
+          className="css-gl7sfg"
+        >
+          <p
+            className="chakra-text css-74evef"
+          >
+            <a
+              className="about"
+              href="/about"
+              onClick={[Function]}
+            >
+              About Us
+            </a>
+          </p>
+          <p
+            className="chakra-text css-74evef"
+          >
+            <a
+              className="privacy"
+              href="/privacy"
+              onClick={[Function]}
+            >
+              Privacy
+            </a>
+          </p>
+          <p
+            className="chakra-text css-15kpuo5"
+          >
+            <a
+              className="impress"
+              href="/impress"
+              onClick={[Function]}
+            >
+              Impress
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Show landing layout with complex content 1`] = `
+<div
+  className="css-1cqrh7h"
+>
+  <nav
+    className="css-11u51jp"
+  >
+    <div
+      className="css-70qvj9"
+    >
+      <div
+        className="css-ichje4"
+      >
+        <p
+          className="chakra-text css-1hgmzub"
+        >
+          GetFitr!
+        </p>
+      </div>
+    </div>
+    <div
+      className="menu-toggler css-dsyim5"
+      onClick={[Function]}
+    >
+      <svg
+        fill="none"
+        height="1em"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line
+          x1="3"
+          x2="21"
+          y1="12"
+          y2="12"
+        />
+        <line
+          x1="3"
+          x2="21"
+          y1="6"
+          y2="6"
+        />
+        <line
+          x1="3"
+          x2="21"
+          y1="18"
+          y2="18"
+        />
+      </svg>
+    </div>
+    <div
+      className="menu-wrapper css-8olkqp"
+    >
+      <div
+        className="css-prcoui"
+      >
+        <p
+          className="chakra-text css-1nlkja4"
+        >
+          <a
+            className="home"
+            href="/"
+            onClick={[Function]}
+          >
+            GetFitr! App
+          </a>
+        </p>
+        <p
+          className="chakra-text css-1nlkja4"
+        >
+          <a
+            className="project"
+            href="/project"
+            onClick={[Function]}
+          >
+            GetFitr! Project
+          </a>
+        </p>
+        <p
+          className="chakra-text css-1g5pnks"
+        >
+          <a
+            className="signup"
+            href="/signup"
+            onClick={[Function]}
+          >
+            <button
+              className="chakra-button signup-button css-1ub6xfx"
+              type="button"
+            >
+              Sign Up for GetFitr!
+            </button>
+          </a>
+        </p>
+      </div>
+    </div>
+  </nav>
+  <h1>
+    Title
+  </h1>
+  <h2>
+    Subtitle
+  </h2>
+  <div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque a nobis odio iste animi! Amet dolores quasi doloremque nostrum ratione laboriosam expedita iure corporis culpa, odio ex, deserunt eos dicta.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati quaerat, autem atque pariatur soluta, omnis iure cum quas maiores in eveniet fugiat error! Recusandae architecto reiciendis qui cum, officia est!
+    </p>
+  </div>
+  <div
+    className="css-1wcxvl2"
+  >
+    <hr
+      aria-orientation="horizontal"
+      className="chakra-divider css-1upb9tn"
+    />
+    <div
+      className="css-m9ru54"
+    >
+      <div
+        className="copyright css-0"
+      >
+        © 2021 Carsten Koch – Chakra UI template from
+        <a
+          className="chakra-link css-0"
+          href="https://raptis.wtf/blog/build-a-landing-page-with-chakra-ui-part-1/"
+          target="_blank"
+        >
+           Jim Raptis
+        </a>
+        .
+      </div>
+      <div
+        className="menu-wrapper css-g3n2lv"
+      >
+        <div
+          className="css-gl7sfg"
+        >
+          <p
+            className="chakra-text css-74evef"
+          >
+            <a
+              className="about"
+              href="/about"
+              onClick={[Function]}
+            >
+              About Us
+            </a>
+          </p>
+          <p
+            className="chakra-text css-74evef"
+          >
+            <a
+              className="privacy"
+              href="/privacy"
+              onClick={[Function]}
+            >
+              Privacy
+            </a>
+          </p>
+          <p
+            className="chakra-text css-15kpuo5"
+          >
+            <a
+              className="impress"
+              href="/impress"
+              onClick={[Function]}
+            >
+              Impress
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Show landing layout with one line content 1`] = `
+<div
+  className="css-1cqrh7h"
+>
+  <nav
+    className="css-11u51jp"
+  >
+    <div
+      className="css-70qvj9"
+    >
+      <div
+        className="css-ichje4"
+      >
+        <p
+          className="chakra-text css-1hgmzub"
+        >
+          GetFitr!
+        </p>
+      </div>
+    </div>
+    <div
+      className="menu-toggler css-dsyim5"
+      onClick={[Function]}
+    >
+      <svg
+        fill="none"
+        height="1em"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line
+          x1="3"
+          x2="21"
+          y1="12"
+          y2="12"
+        />
+        <line
+          x1="3"
+          x2="21"
+          y1="6"
+          y2="6"
+        />
+        <line
+          x1="3"
+          x2="21"
+          y1="18"
+          y2="18"
+        />
+      </svg>
+    </div>
+    <div
+      className="menu-wrapper css-8olkqp"
+    >
+      <div
+        className="css-prcoui"
+      >
+        <p
+          className="chakra-text css-1nlkja4"
+        >
+          <a
+            className="home"
+            href="/"
+            onClick={[Function]}
+          >
+            GetFitr! App
+          </a>
+        </p>
+        <p
+          className="chakra-text css-1nlkja4"
+        >
+          <a
+            className="project"
+            href="/project"
+            onClick={[Function]}
+          >
+            GetFitr! Project
+          </a>
+        </p>
+        <p
+          className="chakra-text css-1g5pnks"
+        >
+          <a
+            className="signup"
+            href="/signup"
+            onClick={[Function]}
+          >
+            <button
+              className="chakra-button signup-button css-1ub6xfx"
+              type="button"
+            >
+              Sign Up for GetFitr!
+            </button>
+          </a>
+        </p>
+      </div>
+    </div>
+  </nav>
+  This is a simple text
+  <div
+    className="css-1wcxvl2"
+  >
+    <hr
+      aria-orientation="horizontal"
+      className="chakra-divider css-1upb9tn"
+    />
+    <div
+      className="css-m9ru54"
+    >
+      <div
+        className="copyright css-0"
+      >
+        © 2021 Carsten Koch – Chakra UI template from
+        <a
+          className="chakra-link css-0"
+          href="https://raptis.wtf/blog/build-a-landing-page-with-chakra-ui-part-1/"
+          target="_blank"
+        >
+           Jim Raptis
+        </a>
+        .
+      </div>
+      <div
+        className="menu-wrapper css-g3n2lv"
+      >
+        <div
+          className="css-gl7sfg"
+        >
+          <p
+            className="chakra-text css-74evef"
+          >
+            <a
+              className="about"
+              href="/about"
+              onClick={[Function]}
+            >
+              About Us
+            </a>
+          </p>
+          <p
+            className="chakra-text css-74evef"
+          >
+            <a
+              className="privacy"
+              href="/privacy"
+              onClick={[Function]}
+            >
+              Privacy
+            </a>
+          </p>
+          <p
+            className="chakra-text css-15kpuo5"
+          >
+            <a
+              className="impress"
+              href="/impress"
+              onClick={[Function]}
+            >
+              Impress
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

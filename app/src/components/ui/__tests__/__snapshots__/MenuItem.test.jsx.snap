@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render a menu button 1`] = `
+<p
+  className="chakra-text css-1g5pnks"
+>
+  <a
+    className=""
+    href="/button"
+    onClick={[Function]}
+  >
+    <button
+      className="chakra-button css-oqfhsh"
+      type="button"
+    >
+      A Button
+    </button>
+  </a>
+</p>
+`;
+
+exports[`Render a menu item with text 1`] = `
+<p
+  className="chakra-text css-n7rqg5"
+>
+  <a
+    className=""
+    href="/test"
+    onClick={[Function]}
+  >
+    A Menu Item
+  </a>
+</p>
+`;
+
+exports[`Render a simple menu item 1`] = `
+<p
+  className="chakra-text css-n7rqg5"
+>
+  <a
+    className=""
+    href="/"
+    onClick={[Function]}
+  >
+    <div>
+      Default menu item
+    </div>
+  </a>
+</p>
+`;

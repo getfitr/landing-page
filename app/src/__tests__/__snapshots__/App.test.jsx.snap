@@ -1,0 +1,255 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Shows the app 1`] = `
+Array [
+  <div
+    className="css-1cqrh7h"
+  >
+    <nav
+      className="css-1x3l87c"
+    >
+      <div
+        className="css-70qvj9"
+      >
+        <div
+          className="css-1mhgyzh"
+        >
+          <p
+            className="chakra-text css-1xs2h3i"
+          >
+            GetFitr!
+          </p>
+        </div>
+      </div>
+      <div
+        className="menu-toggler css-259i0c"
+        onClick={[Function]}
+      >
+        <svg
+          fill="none"
+          height="1em"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="3"
+            x2="21"
+            y1="12"
+            y2="12"
+          />
+          <line
+            x1="3"
+            x2="21"
+            y1="6"
+            y2="6"
+          />
+          <line
+            x1="3"
+            x2="21"
+            y1="18"
+            y2="18"
+          />
+        </svg>
+      </div>
+      <div
+        className="menu-wrapper css-1w6q9gu"
+      >
+        <div
+          className="css-dba1zl"
+        >
+          <p
+            className="chakra-text css-r8wtyc"
+          >
+            <a
+              className="home"
+              href="/"
+              onClick={[Function]}
+            >
+              GetFitr! App
+            </a>
+          </p>
+          <p
+            className="chakra-text css-r8wtyc"
+          >
+            <a
+              className="project"
+              href="/project"
+              onClick={[Function]}
+            >
+              GetFitr! Project
+            </a>
+          </p>
+          <p
+            className="chakra-text css-1j3syha"
+          >
+            <a
+              className="signup"
+              href="/signup"
+              onClick={[Function]}
+            >
+              <button
+                className="chakra-button signup-button css-18qzhp5"
+                type="button"
+              >
+                Sign Up for GetFitr!
+              </button>
+            </a>
+          </p>
+        </div>
+      </div>
+    </nav>
+    <div
+      className="css-1noeeu1"
+    >
+      <div
+        className="chakra-stack css-18rb735"
+      >
+        <h1
+          className="chakra-heading css-1cfimsk"
+        >
+          Get fitter with the GetFitr! app
+        </h1>
+        <h2
+          className="chakra-heading css-g1dzgx"
+        >
+          Use the GetFitr! app to plan your workouts, run them, and analyze your successes.
+        </h2>
+        <div
+          className="css-hjythe"
+        >
+          In addition, GetFitr! is a community-driven development project. You can participate and contribute to it.
+          <p
+            className="chakra-text css-1x3abet"
+          >
+            <a
+              href="/project"
+              onClick={[Function]}
+            >
+              Learn more about the project.
+            </a>
+          </p>
+        </div>
+        <a
+          href="/signup"
+          onClick={[Function]}
+        >
+          <button
+            className="chakra-button css-zmc7sj"
+            type="button"
+          >
+            Start and GetFitr!
+          </button>
+        </a>
+        <p
+          className="chakra-text css-17dhdhr"
+        >
+          The GetFitr! service is free of charge.
+        </p>
+      </div>
+      <div
+        className="css-jocq0n"
+      >
+        <img
+          className="chakra-image__placeholder css-incex5"
+          size="100%"
+        />
+        <p
+          className="chakra-text css-eqfthl"
+        >
+          Photo by 
+          <a
+            className="chakra-link css-15wxsjd"
+            href="https://unsplash.com/@joshgordon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+          >
+            Josh Gordon
+          </a>
+           on 
+          <a
+            className="chakra-link css-15wxsjd"
+            href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+          >
+            Unsplash
+          </a>
+        </p>
+      </div>
+    </div>
+    <div
+      className="css-r6neqd"
+    >
+      <hr
+        aria-orientation="horizontal"
+        className="chakra-divider css-svjswr"
+      />
+      <div
+        className="css-mz377z"
+      >
+        <div
+          className="copyright css-0"
+        >
+          © 2021 Carsten Koch – Chakra UI template from
+          <a
+            className="chakra-link css-15wxsjd"
+            href="https://raptis.wtf/blog/build-a-landing-page-with-chakra-ui-part-1/"
+            target="_blank"
+          >
+             Jim Raptis
+          </a>
+          .
+        </div>
+        <div
+          className="menu-wrapper css-104xflu"
+        >
+          <div
+            className="css-9pkvg9"
+          >
+            <p
+              className="chakra-text css-1oxzqqf"
+            >
+              <a
+                className="about"
+                href="/about"
+                onClick={[Function]}
+              >
+                About Us
+              </a>
+            </p>
+            <p
+              className="chakra-text css-1oxzqqf"
+            >
+              <a
+                className="privacy"
+                href="/privacy"
+                onClick={[Function]}
+              >
+                Privacy
+              </a>
+            </p>
+            <p
+              className="chakra-text css-d4fy64"
+            >
+              <a
+                className="impress"
+                href="/impress"
+                onClick={[Function]}
+              >
+                Impress
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <span />,
+]
+`;

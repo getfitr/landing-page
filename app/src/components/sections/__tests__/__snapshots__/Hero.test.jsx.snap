@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Show the hero component with customized text 1`] = `
+<div
+  className="css-12n6rdc"
+>
+  <div
+    className="chakra-stack css-1e9pxi2"
+  >
+    <h1
+      className="chakra-heading css-17ayy37"
+    >
+      This is a test title
+    </h1>
+    <h2
+      className="chakra-heading css-nm68l6"
+    >
+      In this section I describe my awesome new service.
+    </h2>
+    <div
+      className="css-1uylscf"
+    />
+    <a
+      href="/create-account"
+      onClick={[Function]}
+    >
+      <button
+        className="chakra-button css-pimgrw"
+        type="button"
+      >
+        Sign up now!
+      </button>
+    </a>
+    <p
+      className="chakra-text css-1e1m9zt"
+    >
+      No commitment expected.
+    </p>
+  </div>
+  <div
+    className="css-2ao8yz"
+  >
+    <img
+      className="chakra-image__placeholder css-1h4350"
+      size="100%"
+    />
+    <p
+      className="chakra-text css-977540"
+    />
+  </div>
+</div>
+`;
+
+exports[`Show the hero component with standard text 1`] = `
+<div
+  className="css-12n6rdc"
+>
+  <div
+    className="chakra-stack css-1e9pxi2"
+  >
+    <h1
+      className="chakra-heading css-17ayy37"
+    >
+      React landing page with Chakra UI
+    </h1>
+    <h2
+      className="chakra-heading css-nm68l6"
+    >
+      This is the subheader section where you describe the basic benefits of your product
+    </h2>
+    <div
+      className="css-1uylscf"
+    />
+    <a
+      href="/signup"
+      onClick={[Function]}
+    >
+      <button
+        className="chakra-button css-pimgrw"
+        type="button"
+      >
+        Create your account now
+      </button>
+    </a>
+    <p
+      className="chakra-text css-1e1m9zt"
+    >
+      No credit card required.
+    </p>
+  </div>
+  <div
+    className="css-2ao8yz"
+  >
+    <img
+      className="chakra-image__placeholder css-1h4350"
+      size="100%"
+    />
+    <p
+      className="chakra-text css-977540"
+    />
+  </div>
+</div>
+`;
