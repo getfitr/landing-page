@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.7](https://github.com/getfitr/landing-page/compare/v0.1.6...v0.1.7) (2021-04-29)
+
+
+### Bug Fixes
+
+* push to main ([f17172b](https://github.com/getfitr/landing-page/commit/f17172be45dc0d88005d1bdbfcb6df1feb548ce2))
+* todo docu ([4d638e0](https://github.com/getfitr/landing-page/commit/4d638e09db16b8ed06a4b982b2d1a7d90431d4b7))
+* watched git repo ([41c48eb](https://github.com/getfitr/landing-page/commit/41c48eb736de9fcebb0d8e3d72f2e9ce292e947b))
+
 ### [0.1.6](https://github.com/getfitr/landing-page/compare/v0.1.2...v0.1.6) (2021-04-29)
 
 
