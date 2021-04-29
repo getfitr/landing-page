@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.6](https://github.com/getfitr/landing-page/compare/v0.1.2...v0.1.6) (2021-04-29)
+
+
+### Features
+
+* added an empty hero component ([175663d](https://github.com/getfitr/landing-page/commit/175663dd7048673987664b2ddcb5c0eb09abf1d0))
+* created the header for the landing page ([f68bd50](https://github.com/getfitr/landing-page/commit/f68bd5022ba1491dd18ec307cb958eaa90d22ab1))
+* defined a YAML buildspec ([e6212ef](https://github.com/getfitr/landing-page/commit/e6212ef9dfa20e037a1117a6fcd940dc3b3c0d82))
+* landing page finished with test coverage ([7522fa8](https://github.com/getfitr/landing-page/commit/7522fa88cdaaf4da9bbd594326c44f69b223efd8))
+* pipeline loads code and builds it ([4905284](https://github.com/getfitr/landing-page/commit/4905284800121893fa0bfa3ef7d534940e1f9f06))
+* restructured to combine pipeline, infra, app ([47fed44](https://github.com/getfitr/landing-page/commit/47fed4441fab985e04a4dd882c1d5154416d4da5))
+* restructured to combine pipeline, infra, app ([e84a4ae](https://github.com/getfitr/landing-page/commit/e84a4ae6f46621f5dc9ca5f2feefa58fb39670ff))
+
+
+### Bug Fixes
+
+* adjusted dependencies, jest coverage, path ([dfb1903](https://github.com/getfitr/landing-page/commit/dfb1903e87fbef887d60b8afb6b43b5eed438c62))
+* deleted copy commands in buildspec ([47f69b3](https://github.com/getfitr/landing-page/commit/47f69b3c83f92547a5ea31c8b944a96ae3fef4a9))
+* package dependencies ([b2a1fe2](https://github.com/getfitr/landing-page/commit/b2a1fe2ef4d7b2807c47e18574d7c8d1d2871a13))
+
 ### [0.1.2](https://github.com/getfitr/landing-page/compare/v0.1.1...v0.1.2) (2021-04-25)
 
 ### 0.1.1 (2021-04-25)
