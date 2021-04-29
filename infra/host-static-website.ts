@@ -1,11 +1,7 @@
 #!/usr/bin/env node
 import { CloudFrontWebDistribution, OriginAccessIdentity, SecurityPolicyProtocol, SSLMethod } from '@aws-cdk/aws-cloudfront';
-import { Bucket, CfnBucket } from '@aws-cdk/aws-s3';
-import { BucketDeployment, Source } from '@aws-cdk/aws-s3-deployment';
+import { Bucket } from '@aws-cdk/aws-s3';
 import { App, CfnOutput, RemovalPolicy, Stack, StackProps } from '@aws-cdk/core';
-
-import * as lambda from '@aws-cdk/aws-lambda';
-
 
 /**
  * Static site infrastructure, which deploys site content to an S3 bucket.
@@ -24,39 +20,30 @@ import * as lambda from '@aws-cdk/aws-lambda';
  *   }
  * }
  */
-export class HostStaticWebsite extends Stack {
-  public readonly siteDeployment: string; // don't know yet what to put here
-  
-  constructor(app: App, id: string, props?: StackProps) {
-    super(app, id, props);
+export interface HostStaticWebsiteProps extends StackProps {
+  readonly s3BucketName: string;
+  readonly siteDomain: string;
+  readonly certificateArn: string;
+};
 
-    //     this.lambdaCode = lambda.Code.fromCfnParameters();
-    //     const func = new lambda.Function(this, 'Lambda', {
-    //     });
-    //     const alias = new lambda.Alias(this, 'LambdaAlias', {
-    //       aliasName: 'Prod',
-    //     });
-    //     new codedeploy.LambdaDeploymentGroup(this, 'DeploymentGroup', {
-    //       alias,
-    //       deploymentConfig: codedeploy.LambdaDeploymentConfig.LINEAR_10PERCENT_EVERY_2MINUTES,
-    //     });
-    
+export class HostStaticWebsite extends Stack {
+  readonly distribution: CloudFrontWebDistribution;
+
+  constructor(app: App, id: string, { s3BucketName, siteDomain, certificateArn, ...rest}: HostStaticWebsiteProps) {
+    super(app, id, { ...rest });
 
     // S3 Bucket for static website 
-    const siteBucket = new Bucket(this, "SiteBucket", {
-      bucketName: "getfitr-landing-page-site",
+    const siteBucket = new Bucket(this, `${id}Bucket`, {
+      bucketName: s3BucketName,
       websiteIndexDocument: "index.html",
       websiteErrorDocument: "error.html",
       removalPolicy: RemovalPolicy.DESTROY,
     });
-    new CfnOutput(this, "SiteBucketName", { value: siteBucket.bucketName });
+    new CfnOutput(this, `${id}BucketName`, { value: siteBucket.bucketName });
         
-    const siteDomain = this.node.tryGetContext("domain");
-    const certificateArn = this.node.tryGetContext("certificateArn");
-
     // CloudFront distribution that provides HTTPS
     const oai = new OriginAccessIdentity(this, "OriginAccessIdentity");
-    const distribution = new CloudFrontWebDistribution(this, "SiteDistribution", {
+    this.distribution = new CloudFrontWebDistribution(this, `${id}Distribution`, {
       originConfigs: [{
         s3OriginSource: {
           s3BucketSource: siteBucket,
@@ -71,14 +58,6 @@ export class HostStaticWebsite extends Stack {
         securityPolicy: SecurityPolicyProtocol.TLS_V1_1_2016,
       },
     });
-    new CfnOutput(this, "SiteUrl", { value: `https://${siteDomain}` });
-
-    // Deploy `./src` on your S3 Bucket
-    // new BucketDeployment(this, "DeployOnSiteBucket", {
-    //   sources: [Source.asset("./src")],
-    //   destinationBucket: siteBucket,
-    //   distribution,
-    //   distributionPaths: ["/*"],
-    // })
-  }
-}
+    new CfnOutput(this, `${id}Url`, { value: `https://${siteDomain}` });
+  };
+};
