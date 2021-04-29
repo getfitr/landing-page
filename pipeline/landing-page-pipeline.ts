@@ -50,7 +50,7 @@ export class LandingPagePipeline extends Stack {
     const siteDomain = this.node.tryGetContext("domain");
     const certificateArn = this.node.tryGetContext("certificateArn");
 
-    const staticBucket = new HostStaticWebsite(app, `${id}Site`, {
+    const staticBucket = new HostStaticWebsite(this, `${id}Site`, {
       s3BucketName: 'getfitr-landing-page-static-site',
       siteDomain,
       certificateArn,

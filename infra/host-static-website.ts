@@ -29,8 +29,8 @@ export interface HostStaticWebsiteProps extends StackProps {
 export class HostStaticWebsite extends Stack {
   readonly distribution: CloudFrontWebDistribution;
 
-  constructor(app: App, id: string, { s3BucketName, siteDomain, certificateArn, ...rest}: HostStaticWebsiteProps) {
-    super(app, id, { ...rest });
+  constructor(stack: Stack, id: string, { s3BucketName, siteDomain, certificateArn, ...rest}: HostStaticWebsiteProps) {
+    super(stack, id, { ...rest });
 
     // S3 Bucket for static website 
     const siteBucket = new Bucket(this, `${id}Bucket`, {
