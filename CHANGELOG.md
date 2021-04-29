@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.9](https://github.com/getfitr/landing-page/compare/v0.1.8...v0.1.9) (2021-04-29)
+
+
+### Bug Fixes
+
+* nested the stack now ([bcb567f](https://github.com/getfitr/landing-page/commit/bcb567fb726006cce4a9139f632efbade1ecd222))
+
 ### [0.1.8](https://github.com/getfitr/landing-page/compare/v0.1.7...v0.1.8) (2021-04-29)
 
 
