@@ -93,8 +93,8 @@ The stack expects a couple of information being provided within the `cdk.json`:
 
 ### Todos:
 
-[ ] Explain how to create a Hosted Zone in Route 53.
-[ ] Explain how to create a certificate.
+- [ ] Explain how to create a Hosted Zone in Route 53.
+- [ ] Explain how to create a certificate.
 
 Here is an example for the settings in the `cdk.json`:
 
@@ -121,4 +121,4 @@ Here is an example for the settings in the `cdk.json`:
 
 ### Todo:
 
-[ ] Explain the structure of the project folder
+- [ ] Explain the structure of the project folder
