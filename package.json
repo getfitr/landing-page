@@ -1,6 +1,9 @@
 {
   "name": "landing-page-pipeline",
   "version": "0.1.5",
+  "repository": {
+    "url": "https://github.com/getfitr/landing-page.git"
+  },
   "bin": {
     "landing-page-pipeline": "bin/landing-page-pipeline.js"
   },
@@ -10,28 +13,32 @@
     "app:start": "yarn --cwd ./app start",
     "app:build": "yarn --cwd ./app build",
     "app:test": "yarn --cwd ./app test",
+    "app:prebuild": "yarn --cwd ./app test:prebuild",
     "build": "tsc",
     "cdk": "cdk",
-    "cdk:deploy": "cdk deploy LandingPageStack",
-    "deploy": "git push --follow-tags origin main && npm run cdk:deploy",
+    "cdk:deploy": "cdk deploy LandingPagePipeline",
+    "deploy": "git push --follow-tags origin dev && npm run cdk:deploy",
     "release": "standard-version && npm run deploy",
     "major-release": "standard-version --release-as major && npm run deploy"
   },
   "devDependencies": {
-    "@aws-cdk/assert": "1.98.0",
+    "@aws-cdk/assert": "^1.101.0",
     "@types/node": "10.17.27",
-    "aws-cdk": "^1.100.0",
+    "aws-cdk": "^1.101.0",
+    "jest": "^26.6.3",
     "standard-version": "^9.2.0",
     "ts-node": "^9.0.0",
     "typescript": "~3.9.7"
   },
   "dependencies": {
-    "@aws-cdk/aws-codebuild": "^1.100.0",
-    "@aws-cdk/aws-codedeploy": "^1.100.0",
-    "@aws-cdk/aws-codepipeline": "^1.100.0",
-    "@aws-cdk/aws-codepipeline-actions": "^1.100.0",
-    "@aws-cdk/aws-lambda": "^1.100.0",
-    "@aws-cdk/core": "^1.100.0",
+    "@aws-cdk/aws-cloudfront": "^1.101.0",
+    "@aws-cdk/aws-codebuild": "^1.101.0",
+    "@aws-cdk/aws-codedeploy": "^1.101.0",
+    "@aws-cdk/aws-codepipeline": "^1.101.0",
+    "@aws-cdk/aws-codepipeline-actions": "^1.101.0",
+    "@aws-cdk/aws-s3": "^1.101.0",
+    "@aws-cdk/aws-s3-deployment": "^1.101.0",
+    "@aws-cdk/core": "^1.101.0",
     "source-map-support": "^0.5.16"
   }
 }

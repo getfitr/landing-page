@@ -11,24 +11,25 @@ env:
 phases:
   install:
     runtime-versions:
-      nodejs: 12 
+      nodejs: 14
     commands:
       - echo Build is starting now...
       - echo Installing source dependencies...
-      - yarn
+      - npm run app:install
 
   pre_build:
     commands:
       - echo Running unit tests...
-      - yarn test
+      - npm run app:prebuild
 
   build:
     commands:
       - echo Dev Build starting...
-      - yarn build
+      - npm run app:build
       - echo Checking build artifacts
       - cd build && ls -la
       - cd ..
+
   post_build:
     commands:
       - echo Checking Environment Variables
@@ -41,9 +42,11 @@ phases:
 
       # (2) Clearing CloudFront Cache
       - echo "Calling cloudfront create-invalidation"
-      - aws cloudfront create-invalidation --distribution-id $cfdistid --paths "/*"
+      # un-echo this line when ready
+      - echo aws cloudfront create-invalidation --distribution-id $cfdistid --paths "/*"
       - echo "Clear cache on cloudfront"
       - echo "Job completed successfully! Wait for CloudFront Cache to be cleared for a few nimutes"
+
 artifacts:
   discard-paths: yes
   # base-directory: 'build'
