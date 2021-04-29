@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.8](https://github.com/getfitr/landing-page/compare/v0.1.7...v0.1.8) (2021-04-29)
+
+
+### Features
+
+* S3 site bucket is created ([54eab7b](https://github.com/getfitr/landing-page/commit/54eab7ba7026796bd7889c1bade6009f9244ece4))
+
+
+### Bug Fixes
+
+* buildspec works in the source folder now ([1c3b1ba](https://github.com/getfitr/landing-page/commit/1c3b1ba9ca9fd0fa5e1b84c1e7d5d9c357be9d64))
+* npm scripts don't need to call yarn scripts ([1549836](https://github.com/getfitr/landing-page/commit/1549836a93df92066612b594a3984333e4b6a675))
+* updated certificate for getfitr.de ([3333afb](https://github.com/getfitr/landing-page/commit/3333afb1f2ccf0ee6f8fc067f1f0c65140ee6469))
+
 ### [0.1.7](https://github.com/getfitr/landing-page/compare/v0.1.6...v0.1.7) (2021-04-29)
 
 
