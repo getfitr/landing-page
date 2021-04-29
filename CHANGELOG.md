@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.10](https://github.com/getfitr/landing-page/compare/v0.1.9...v0.1.10) (2021-04-29)
+
+
+### Bug Fixes
+
+* testing without S3 bucket ([14a4e02](https://github.com/getfitr/landing-page/commit/14a4e02f4300c9bc5158aff42b53df7659e191c6))
+
 ### [0.1.9](https://github.com/getfitr/landing-page/compare/v0.1.8...v0.1.9) (2021-04-29)
 
 
