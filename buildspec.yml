@@ -38,8 +38,6 @@ phases:
       # (1) Version control bundle
       - echo "Getting Git Commit Sha for bundle version control"
       - export bundleVersion=$(git rev-parse --short HEAD)
-      - cp build/my-widget-$env.min.css build/my-widget-$env-${bundleVersion}.min.css
-      - cp build/my-widget-$env.min.js build/my-widget-$env-${bundleVersion}.min.js
 
       # (2) Clearing CloudFront Cache
       - echo "Calling cloudfront create-invalidation"
