@@ -26,6 +26,7 @@ export class LandingPagePipeline extends Stack {
     const sourceOutput = new codepipeline.Artifact(`${id}SrcOutput`);
     const buildOutput = new codepipeline.Artifact(`${id}BuildOutput`);
     const connectionArn = this.node.tryGetContext("githubConnectionArn");
+    const gitRepository = this.node.tryGetContext("gitRepository");
 
     new codepipeline.Pipeline(this, id, {
       restartExecutionOnUpdate: true,
@@ -36,9 +37,7 @@ export class LandingPagePipeline extends Stack {
             new codepipeline_actions.CodeStarConnectionsSourceAction({
               actionName: 'Checkout',
               output: sourceOutput,
-              owner: 'getfitr',
-              repo: 'landing-page-pipeline',
-              branch: 'main',
+              ...gitRepository,
               connectionArn: connectionArn,
             }),
           ],
