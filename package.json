@@ -17,7 +17,7 @@
     "build": "tsc",
     "cdk": "cdk",
     "cdk:deploy": "cdk deploy LandingPagePipeline",
-    "deploy": "git push --follow-tags origin dev && npm run cdk:deploy",
+    "deploy": "git push --follow-tags origin main && npm run cdk:deploy",
     "release": "standard-version && npm run deploy",
     "major-release": "standard-version --release-as major && npm run deploy"
   },
