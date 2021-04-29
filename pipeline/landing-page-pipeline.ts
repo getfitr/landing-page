@@ -50,13 +50,13 @@ export class LandingPagePipeline extends Stack {
     const siteDomain = this.node.tryGetContext("domain");
     const certificateArn = this.node.tryGetContext("certificateArn");
 
-    const staticBucket = new HostStaticWebsite(this, `${id}Site`, {
-      s3BucketName: 'getfitr-landing-page-static-site',
-      siteDomain,
-      certificateArn,
-    });
-    const { distribution: { distributionId }} = staticBucket;
-    new CfnOutput(this, `${id}DistributionId`, { value: distributionId });
+    // const staticBucket = new HostStaticWebsite(this, `${id}Site`, {
+    //   s3BucketName: 'getfitr-landing-page-static-site',
+    //   siteDomain,
+    //   certificateArn,
+    // });
+    // const { distribution: { distributionId }} = staticBucket;
+    // new CfnOutput(this, `${id}DistributionId`, { value: distributionId });
 
     new Pipeline(this, id, {
       restartExecutionOnUpdate: false,  // it should only start when new sources are pushed to GitHub
