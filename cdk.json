@@ -9,7 +9,7 @@
     "@aws-cdk/aws-s3:grantWriteWithoutAcl": true,
     "domain": "getfitr.de",
     "subdomain": "",
-    "certificateArn": "arn:aws:acm:us-east-1:691062780315:certificate/a44066ce-66a7-41c8-a9ce-e76940b7d226",
+    "certificateArn": "arn:aws:acm:us-east-1:691062780315:certificate/50606593-9151-46cd-a81b-48b77d280d72",
     "githubConnectionArn": "arn:aws:codestar-connections:eu-west-1:691062780315:connection/5a5860b1-a9a0-4e2b-8c10-34b65c5f712c",
     "gitRepository": {
       "owner": "getfitr",
